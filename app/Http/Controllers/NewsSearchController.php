@@ -13,7 +13,7 @@ class NewsSearchController extends Controller
         try {
             $searchTerm = $request->input('searchTerm');
             $apiKey = 'test';
-            $apiUrl = "https://content.guardianapis.com/search?q={$searchTerm}&api-key=test";
+            $apiUrl = "https://content.guardianapis.com/search?q={$searchTerm}&api-key={$apiKey}";
 
             $client = new Client();
             $response = $client->get($apiUrl);
